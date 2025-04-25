@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Bytesized&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Special+Gothic+Expanded+One&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "Special Gothic Expanded One", sans-serif;
+}
+
+body {
+    background-color: rgba(34, 33, 33);
+}
+
+.container {
+    width: 80%;
+    margin: 50px auto;
+}
+
+#title {
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-align: center;
+    color: rgba(253, 213, 36, 0.849);
+    font-size: clamp(20px, 5vw, 30px);
+}
+
+.inputSection {
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#input {
+    height: 45px;
+    width: 400px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    text-transform: initial;
+    word-spacing: 3px;
+}
+
+#btn {
+    height: 45px;
+    width: 70px;
+    font-size: 15px;
+    background-color: rgba(253, 213, 36, 0.849);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    border-bottom: 3px solid rgb(199, 129, 1);
+    cursor: pointer;
+    transition: all .1s;
+}
+
+#btn:active {
+    transform: translateY(4px);
+    border-bottom: none;
+}
+
+#guide-msg {
+    color: red;
+    width: 100%;
+    text-align: center;
+    font-size: clamp(5px, 3vh, 15px);
+    margin-top: -10px;
+    margin-bottom: 10px;
+    word-spacing: 5px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#images {
+    height: auto;
+    width: 100%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 10px;
+}
+
+#images img {
+    height: 300px;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    object-fit: cover;
+    transition: all .3s ease-in-out;
+    border-bottom: 5px solid rgb(199, 129, 1);
+}
+
+.readMe {
+    width: 100%;
+    margin: 10px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+#more {
+    height: 50px;
+    width: 200px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    border-bottom: 5px solid rgb(199, 129, 1);
+    transition: all .1s ease-in-out;
+    display: none;
+}
+
+#more:active {
+    transform: translateY(4px);
+    border-bottom: none;
+}
+
+.img-box {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.4);
+}
+
+.img-box img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: all 0.2s ease, filter 0.3s ease;
+}
+
+.overlay-text {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.342);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-transform: capitalize;
+    cursor: pointer;
+    opacity: 0;
+    font-size: 12px;
+    transition: opacity 0.3s ease-in-out;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+.img-box:hover .overlay-text {
+    opacity: 1;
+}
+
+.img-box:hover img {
+    border-bottom: 5px solid orange;
+    transform: scale(1.2);
+}
+
+@media (max-width: 480px) {
+    .inputSection {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #input {
+        width: 100%;
+    }
+
+    #btn {
+        margin: 0%;
+        width: 100%;
+    }
+
+    #images {
+        margin: 0%;
+    }
+
+    #guide-msg {
+        width: 100%;
+        overflow: auto;
+    }
+}
