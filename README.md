@@ -1,4 +1,4 @@
-<h1>📷 Unsplash Image Search App</h1>
+<h1>📷 Image Search App</h1>
 
 <p>
   This is a dynamic web application that allows users to search and view stunning images directly from the 
